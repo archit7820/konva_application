@@ -266,36 +266,44 @@ function App() {
   return (
     <div className='konva'>
       <div className='controllers'>
+
+<div className='variable'>
         <input type="file" onChange={handleFileChange} />
+
+<div className='text_color'>
         <input
+        className='text_input'
           type="text"
           value={textValue}
           onChange={handleTextChange}
           placeholder="Enter text"
-          style={{ margin: '10px', zIndex: "9999" }}
+          style={{ zIndex: "9999" }}
         />
         <input
           type="color"
           value={fontColor}
           onChange={handleFontColorChange}
-          style={{ margin: '10px' }}
         />
-        <select value={fontStyle} onChange={handleFontStyleChange} style={{ margin: '10px' }}>
+
+</div>
+        <select value={fontStyle} onChange={handleFontStyleChange} style={{  }}>
           <option value="normal">Normal</option>
           <option value="bold">Bold</option>
           <option value="italic">Italic</option>
         </select>
-        <button onClick={addText}>Add Text</button>
-        <button onClick={removeText}>Remove Text</button>
-        <button onClick={removeImages}>Remove Images</button>
-        <button onClick={addVideo}>Add Video</button>
-        <button onClick={toggleVideoPlayback}>Play/Pause Video</button>
-        <div className="direction-buttons">
-          <button onClick={() => handleDirection('up')}>↑</button>
-          <button onClick={() => handleDirection('down')}>↓</button>
-          <button onClick={() => handleDirection('left')}>←</button>
-          <button onClick={() => handleDirection('right')}>→</button>
         </div>
+        <div className='button' onClick={addText}>Add Text</div>
+        <div className='button' onClick={removeText}>Remove Text</div>
+        <div className='button' onClick={removeImages}>Remove Images</div>
+        <div className='button' onClick={addVideo}>Add Video</div>
+        <div className='button' onClick={toggleVideoPlayback}>Play/Pause Video</div>
+        <div className="direction-buttons">
+  <div className="direction-button" onClick={() => handleDirection('up')}>↑</div>
+  <div className="direction-button" onClick={() => handleDirection('right')}>→</div>
+  <div className="direction-button" onClick={() => handleDirection('down')}>↓</div>
+  <div className="direction-button" onClick={() => handleDirection('left')}>←</div>
+</div>
+
       </div>
       <div className="canvas" ref={stageRef} id="stage-container" style={{ border: '1px solid grey' }}>
       </div>

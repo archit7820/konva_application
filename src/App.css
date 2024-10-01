@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: row;
   flex : 5;
+  gap : 3rem ;
 
 }
 .controllers {
@@ -14,7 +15,65 @@
 }
 .canvas{
   flex: 3;
+  border-radius: 20px;
   width : 200px ;
   height :300px ;
 }
 
+.direction-buttons {
+  margin-top : 3rem ;
+  margin-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100px; 
+  height: 100px; 
+}
+.variable{
+  display: flex;
+  flex-direction: column ;
+  gap  : 0.5rem ;
+}
+.text_input{
+  border-radius: 5px;
+  height : 2rem ;
+}
+.text_color{
+  display: flex;
+  justify-content: space-between;
+}
+.button{
+  margin-top:0.5rem;
+border : 1px solid white ;
+background-color: #21aebe;
+border-radius: 10px;
+padding : 0.5rem ;
+cursor: pointer;
+text-align: center;
+color : white ;
+}
+.direction-button {
+  width: 40px; 
+  height: 40px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4CAF50; 
+  color: white; 
+  border-radius: 50%;
+  position: absolute; 
+  transition: background-color 0.3s; 
+  cursor: pointer;
+}
+
+.direction-button:hover {
+  background-color: #45a049; 
+}
+
+
+.direction-button:nth-child(1) { top: 0; left: 50%; transform: translate(-50%, -50%); } 
+.direction-button:nth-child(2) { top: 50%; right: 0; transform: translate(50%, -50%); } 
+.direction-button:nth-child(3) { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
+.direction-button:nth-child(4) { top: 50%; left: 0; transform: translate(-50%, -50%); }
